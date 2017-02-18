@@ -455,11 +455,11 @@ var node = svg.selectAll(".node")
     .data(force.nodes())
   .enter().append("g")
     .attr("class", "node")
-
+	.style("fill","green")
+	
     .call(force.drag);
 
 // add the nodes
-
 var degree = d3.scale.linear().range([3,12])
 	//.domain([1,8])
 	.domain([0, d3.max(d3.values(nodes), function(d) { return d.weight; })]);
@@ -467,8 +467,16 @@ var degree = d3.scale.linear().range([3,12])
 
 node.append("circle")
     	.attr("r", function(d){
-			
-		return degree(d.weight)});
+		return degree(d.weight)})
+		.on("dblclick", function(d){ 
+			if (d.fixed){
+				d.fixed = false;
+				d3.select(this).style("fill", "#ccc")
+			} else {
+			d.fixed = true;
+			d3.select(this).style("fill", "blue");
+			}
+		});
 	
 //add text to nodes
 node.append("text")
