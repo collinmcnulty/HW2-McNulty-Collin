@@ -411,10 +411,8 @@ var force = d3.layout.force()
 
 // Set the range
 var  v = d3.scale.linear().range([0, 100]);
-var degree = d3.scale.linear().range([5,20])
-	.domain([d3.min(nodes, function(d) {return d.weight}), 
-			d3.max(nodes, function(d) {return d.weight})
-])
+
+
 
 // Scale the range of the data
 v.domain([0, d3.max(links, function(d) { return d.value; })]);
@@ -461,10 +459,16 @@ var node = svg.selectAll(".node")
     .call(force.drag);
 
 // add the nodes
+
+var degree = d3.scale.linear().range([3,12])
+	//.domain([1,8])
+	.domain([0, d3.max(d3.values(nodes), function(d) { return d.weight; })]);
+//var test = d3.max(d3.values(nodes), function(d) { return d.weight; })
+
 node.append("circle")
     	.attr("r", function(d){
 			
-		return d.weight});
+		return degree(d.weight)});
 	
 //add text to nodes
 node.append("text")
