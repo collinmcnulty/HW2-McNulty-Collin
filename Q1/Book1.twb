@@ -1,0 +1,821 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10100.17.0118.2108                               -->
+<workbook source-build='10.1.4 (10100.17.0118.2108)' source-platform='win' version='10.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='unhcr_popstats_demographics' inline='true' name='federated.1enyluh199yuzd19274o10jgaure' version='10.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='unhcr_popstats_demographics' name='textscan.03cbphb1gzql481h5hhoj0hgvz7p'>
+            <connection class='textscan' directory='E:/Collin/Grad School/HW2-McNulty-Collin/Q1' filename='unhcr_popstats_demographics.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.03cbphb1gzql481h5hhoj0hgvz7p' name='unhcr_popstats_demographics.csv' table='[unhcr_popstats_demographics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='string' name='Country / territory of asylum/residence' ordinal='1' />
+            <column datatype='string' name='Location Name' ordinal='2' />
+            <column datatype='integer' name='Female 0-4' ordinal='3' />
+            <column datatype='integer' name='Female 5-11' ordinal='4' />
+            <column datatype='string' name='Female 5-17' ordinal='5' />
+            <column datatype='integer' name='Female 12-17' ordinal='6' />
+            <column datatype='integer' name='Female 18-59' ordinal='7' />
+            <column datatype='string' name='Female 60+' ordinal='8' />
+            <column datatype='integer' name='F: Unknown' ordinal='9' />
+            <column datatype='integer' name='F: Total' ordinal='10' />
+            <column datatype='integer' name='Male 0-4' ordinal='11' />
+            <column datatype='integer' name='Male 5-11' ordinal='12' />
+            <column datatype='string' name='Male 5-17' ordinal='13' />
+            <column datatype='integer' name='Male 12-17' ordinal='14' />
+            <column datatype='integer' name='Male 18-59' ordinal='15' />
+            <column datatype='string' name='Male 60+' ordinal='16' />
+            <column datatype='integer' name='M: Unknown' ordinal='17' />
+            <column datatype='integer' name='M: Total' ordinal='18' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country / territory of asylum/residence</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country / territory of asylum/residence]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Country / territory of asylum/residence</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location Name]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Location Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Female 0-4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Female 0-4]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Female 0-4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Female 5-11</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Female 5-11]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Female 5-11</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Female 5-17</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Female 5-17]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Female 5-17</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Female 12-17</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Female 12-17]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Female 12-17</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Female 18-59</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Female 18-59]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Female 18-59</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Female 60+</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Female 60+]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Female 60+</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F: Unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F: Unknown]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>F: Unknown</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F: Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F: Total]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>F: Total</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Male 0-4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Male 0-4]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Male 0-4</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Male 5-11</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Male 5-11]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Male 5-11</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Male 5-17</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Male 5-17]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Male 5-17</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Male 12-17</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Male 12-17]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Male 12-17</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Male 18-59</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Male 18-59]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Male 18-59</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Male 60+</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Male 60+]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>Male 60+</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>M: Unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[M: Unknown]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>M: Unknown</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>M: Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[M: Total]</local-name>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias>M: Total</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[unhcr_popstats_demographics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='record-delimiter'>&quot;\\r&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Children' datatype='integer' name='[Calculation_804455526193016832]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Female 0-4]+[Female 5-11]+[Female 12-17]+[Male 0-4]+[Male 5-11]+[Male 12-17]' />
+      </column>
+      <column caption='Adults' datatype='integer' name='[Calculation_804455526193315841]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Female 18-59]+[Male 18-59]' />
+      </column>
+      <column caption='Elderly' datatype='string' name='[Calculation_804455526193414146]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Female 60+]+[Male 60+]' />
+      </column>
+      <column datatype='string' name='[Country / territory of asylum/residence]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='integer' name='[F: Total]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[M: Total]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column-instance column='[Calculation_804455526193016832]' derivation='Sum' name='[sum:Calculation_804455526193016832:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_804455526193315841]' derivation='Sum' name='[sum:Calculation_804455526193315841:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[F: Total]' derivation='Sum' name='[sum:F: Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[M: Total]' derivation='Sum' name='[sum:M: Total:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.394207' measure-ordering='alphabetic' measure-percentage='0.605793' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:Calculation_804455526193315841:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:F: Total:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:Calculation_804455526193016832:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:M: Total:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Year' />
+        <field-sort-custom-order field='Country / territory of asylum/residence' />
+        <field-sort-custom-order field='Location Name' />
+        <field-sort-custom-order field='Calculation_804455526193414146' />
+        <field-sort-custom-order field='Female 0-4' />
+        <field-sort-custom-order field='Calculation_804455526193016832' />
+        <field-sort-custom-order field='Female 5-11' />
+        <field-sort-custom-order field='Female 5-17' />
+        <field-sort-custom-order field='Female 12-17' />
+        <field-sort-custom-order field='Female 18-59' />
+        <field-sort-custom-order field='Calculation_804455526193315841' />
+        <field-sort-custom-order field='Female 60+' />
+        <field-sort-custom-order field='F: Unknown' />
+        <field-sort-custom-order field='F: Total' />
+        <field-sort-custom-order field='Male 0-4' />
+        <field-sort-custom-order field='Male 5-11' />
+        <field-sort-custom-order field='Male 5-17' />
+        <field-sort-custom-order field='Male 12-17' />
+        <field-sort-custom-order field='Male 18-59' />
+        <field-sort-custom-order field='Male 60+' />
+        <field-sort-custom-order field='M: Unknown' />
+        <field-sort-custom-order field='M: Total' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='unhcr_popstats_demographics' name='federated.1enyluh199yuzd19274o10jgaure' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1enyluh199yuzd19274o10jgaure'>
+            <column caption='Children' datatype='integer' name='[Calculation_804455526193016832]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Female 0-4]+[Female 5-11]+[Female 12-17]+[Male 0-4]+[Male 5-11]+[Male 12-17]' />
+            </column>
+            <column caption='Adults' datatype='integer' name='[Calculation_804455526193315841]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Female 18-59]+[Male 18-59]' />
+            </column>
+            <column datatype='string' name='[Country / territory of asylum/residence]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='integer' name='[F: Total]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Female 0-4]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Female 12-17]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Female 18-59]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Female 5-11]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[M: Total]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Male 0-4]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Male 12-17]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Male 18-59]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Male 5-11]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Country / territory of asylum/residence]' derivation='None' name='[none:Country / territory of asylum/residence:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_804455526193016832]' derivation='Sum' name='[sum:Calculation_804455526193016832:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_804455526193315841]' derivation='Sum' name='[sum:Calculation_804455526193315841:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[F: Total]' derivation='Sum' name='[sum:F: Total:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[M: Total]' derivation='Sum' name='[sum:M: Total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1enyluh199yuzd19274o10jgaure].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:Calculation_804455526193315841:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:Calculation_804455526193016832:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.1enyluh199yuzd19274o10jgaure].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:Calculation_804455526193315841:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1enyluh199yuzd19274o10jgaure].[sum:Calculation_804455526193016832:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <filter class='quantitative' column='[federated.1enyluh199yuzd19274o10jgaure].[none:Year:qk]' included-values='in-range'>
+            <min>2012</min>
+            <max>2012</max>
+          </filter>
+          <slices>
+            <column>[federated.1enyluh199yuzd19274o10jgaure].[none:Year:qk]</column>
+            <column>[federated.1enyluh199yuzd19274o10jgaure].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1enyluh199yuzd19274o10jgaure].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1enyluh199yuzd19274o10jgaure].[Multiple Values]</rows>
+        <cols>([federated.1enyluh199yuzd19274o10jgaure].[none:Country / territory of asylum/residence:nk] / [federated.1enyluh199yuzd19274o10jgaure].[:Measure Names])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>Country / territory of asylum/residence: </run>
+              <run bold='true'>&lt;[federated.1enyluh199yuzd19274o10jgaure].[none:Country / territory of asylum/residence:nk]&gt;</run>
+              <run fontcolor='#787878'>&#10;F: Total: </run>
+              <run bold='true'>&lt;[federated.1enyluh199yuzd19274o10jgaure].[sum:F: Total:qk]&gt;</run>
+              <run fontcolor='#787878'>&#10;M: Total: </run>
+              <run bold='true'>&lt;[federated.1enyluh199yuzd19274o10jgaure].[sum:M: Total:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields />
+                      <y-fields />
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1enyluh199yuzd19274o10jgaure].[none:Country / territory of asylum/residence:nk]</field>
+                      <field>[federated.1enyluh199yuzd19274o10jgaure].[sum:F: Total:qk]</field>
+                      <field>[federated.1enyluh199yuzd19274o10jgaure].[sum:M: Total:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Iraq&quot;</value>
+                    <value>418116</value>
+                    <value>440754</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-155' y='59' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>Country / territory of asylum/residence: </run>
+              <run bold='true'>&lt;[federated.1enyluh199yuzd19274o10jgaure].[none:Country / territory of asylum/residence:nk]&gt;</run>
+              <run fontcolor='#787878'>&#10;F: Total: </run>
+              <run bold='true'>&lt;[federated.1enyluh199yuzd19274o10jgaure].[sum:F: Total:qk]&gt;</run>
+              <run fontcolor='#787878'>&#10;M: Total: </run>
+              <run bold='true'>&lt;[federated.1enyluh199yuzd19274o10jgaure].[sum:M: Total:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields />
+                      <y-fields />
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1enyluh199yuzd19274o10jgaure].[none:Country / territory of asylum/residence:nk]</field>
+                      <field>[federated.1enyluh199yuzd19274o10jgaure].[sum:F: Total:qk]</field>
+                      <field>[federated.1enyluh199yuzd19274o10jgaure].[sum:M: Total:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Afghanistan&quot;</value>
+                    <value>723777</value>
+                    <value>771521</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='unhcr_popstats_demographics' name='federated.1enyluh199yuzd19274o10jgaure' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1enyluh199yuzd19274o10jgaure'>
+            <column datatype='integer' name='[F: Total]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[M: Total]' role='measure' type='quantitative' />
+            <column-instance column='[F: Total]' derivation='Sum' name='[sum:F: Total:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[M: Total]' derivation='Sum' name='[sum:M: Total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1enyluh199yuzd19274o10jgaure].[sum:F: Total:qk]' />
+              <lod column='[federated.1enyluh199yuzd19274o10jgaure].[sum:M: Total:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1enyluh199yuzd19274o10jgaure].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1enyluh199yuzd19274o10jgaure].[:Measure Names]</field>
+            <field>[federated.1enyluh199yuzd19274o10jgaure].[none:Country / territory of asylum/residence:nk]</field>
+            <field>[federated.1enyluh199yuzd19274o10jgaure].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='24' name='Sheet 2' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAABn0lEQVRYhe2YPyiEYRzHP3TDDRaLQRY3IgzP8MbVK92ARKnztwwGilIynCwSg4jhNgqb
+      xXIZGO5R7+DPDZe4cqU4Kf8yCadw9RjOCTHoytOb91NPvc/v+fXr2+fpWd4cpZTiH5OrO4Bu
+      HAG6A+jGEaA7gG4cAboD6MYRoDuAbhwBugPoxhGgO4BubCkgMllHdcscsS91OTKC/OUsGwqI
+      IG+6GfceYsWzn2Y/ARFJoszA5yvlQGZvwHYCYjunVHo9UF5F8f4WiU+nV8ixdkxDIKobGVzY
+      4zZzdLvNVLuJIQSG2czo+k26ruzEwazyT+y+b1/CAdUxf/K+DwcCKvylf2D+RKmzRdUxvKFe
+      vhnp+tPry5K4ZZEIrSBCH4olJVz2eij8pj91f88jgNuN+4eZNnoCcaRVzJgVJRrNrDUGkcjL
+      TM8TyWQq/XW9ydTMEYbPAwU1+O5WCO5c8wSkkhccnz8AdhKQ2GK/opX6vI/FQlr8+VhvBlxF
+      V6w2mQghqO1axjUUpMeT7uuc7uM52IYpBN6GfpZijwDkKOX8Ff7XvAIrXmOUIWgPlwAAAABJ
+      RU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
