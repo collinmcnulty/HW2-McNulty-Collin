@@ -17,6 +17,14 @@ body {
   fill: none;
   stroke: green;
 }
+.square {
+	fill: none;
+	stroke: blue;
+	}
+.circle {
+	fill: none;
+	stroke: red;
+	}
 
 </style>
 <body>
@@ -48,6 +56,13 @@ d3.csv("data.csv", function(error, data) {
     d.y = +d.Distribution;
   });
 
+  // symbol generators
+var symbolTypes = {
+    "triangleDown": d3.svg.symbol().type("triangle-down"),
+    "circle": d3.svg.symbol().type("circle"),
+	"square": d3.svg.symbol().type("square")
+};
+  
   // Compute the scales’ domains.
   x.domain(d3.extent(data, function(d) { return d.x; })).nice();
   y.domain(d3.extent(data, function(d) { return d.y; })).nice();
@@ -68,8 +83,28 @@ d3.csv("data.csv", function(error, data) {
       .data(data)
     .enter().append("path")
       .attr("class", "point")
-      .attr("d", d3.svg.symbol().type("triangle-up"))
+	  .attr("class", function(d){
+		if (d.Species=="Lagomorpha")
+			{return "circle"}
+		else if (d.Species=="Dasyuromorphia")
+			{return "point"}
+		else {return "square"}
+		})
+		.attr("d", d3.svg.symbol().type("circle"))
+       .attr("d", function(d,i){
+		   if (d.Species=="Lagomorpha")
+				return symbolTypes.circle();
+			else if (d.Species=="Dasyuromorphia")
+				return symbolTypes.triangleDown();
+			else 
+				return symbolTypes.square();
+		  })
       .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+	  
+	legend = svg.append("g")
+		.attr("class","legend")
+		.attr("transform", "translate(450,50)")
+		.call(d3.legend)
 });
 
 </script>
