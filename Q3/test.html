@@ -2,6 +2,8 @@
 <meta charset="utf-8">
 <style>
 
+
+
 body {
   font: 10px sans-serif;
 }
@@ -25,7 +27,12 @@ body {
 	fill: none;
 	stroke: red;
 	}
-
+.legend {                                                   
+        font-size: 12px;                                          
+      }                                                           
+      rect {                                                     
+        stroke-width: 2;                           
+      }   
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -37,10 +44,18 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
 
 var x = d3.scale.linear()
     .range([0, width]);
+	
+var xlog = d3.scale.log()
+    .range([0, width]);
 
 var y = d3.scale.linear()
     .range([height, 0]);
-
+	
+var ylog = d3.scale.log()
+    .range([height, 0]);
+	
+var color = ["blue", "red", "green"]
+	
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -101,12 +116,76 @@ var symbolTypes = {
 		  })
       .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
 	  
-	legend = svg.append("g")
-		.attr("class","legend")
-		.attr("transform", "translate(450,50)")
-		.call(d3.legend)
+	  
+
 });
 
+var down=margin.top
+
+var svg2 = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + down + ")");
+
+d3.csv("data.csv", function(error, data) {
+  if (error) throw error;
+
+  // Coerce the strings to numbers.
+  data.forEach(function(d) {
+    d.x = +d.BodyMass;
+    d.y = +d.Distribution;
+  });
+
+  // symbol generators
+var symbolTypes = {
+    "triangleDown": d3.svg.symbol().type("triangle-down"),
+    "circle": d3.svg.symbol().type("circle"),
+	"square": d3.svg.symbol().type("square")
+};
+  
+  // Compute the scales’ domains.
+  xlog.domain(d3.extent(data, function(d) { return d.x; })).nice();
+  ylog.domain(d3.extent(data, function(d) { return d.y; })).nice();
+
+  // Add the x-axis.
+  svg2.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.svg.axis().scale(xlog).orient("bottom"));
+
+  // Add the y-axis.
+  svg2.append("g")
+      .attr("class", "y axis")
+      .call(d3.svg.axis().scale(ylog).orient("left"));
+
+  // Add the points!
+  svg2.selectAll(".point")
+      .data(data)
+    .enter().append("path")
+      .attr("class", "point")
+	  .attr("class", function(d){
+		if (d.Species=="Lagomorpha")
+			{return "circle"}
+		else if (d.Species=="Dasyuromorphia")
+			{return "point"}
+		else {return "square"}
+		})
+		.attr("d", d3.svg.symbol().type("circle"))
+       .attr("d", function(d,i){
+		   if (d.Species=="Lagomorpha")
+				return symbolTypes.circle();
+			else if (d.Species=="Dasyuromorphia")
+				return symbolTypes.triangleDown();
+			else 
+				return symbolTypes.square();
+		  })
+      .attr("transform", function(d) { return "translate(" + xlog(d.x) + "," + ylog(d.y) + ")"; });
+	  
+	  
+
+});
+	
 </script>
 </body>
 </html>
