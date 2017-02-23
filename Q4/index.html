@@ -53,8 +53,25 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+d3.csv("heatmap.csv", function(error, buckets) {
+  if (error) throw error;
 
+  // Coerce the CSV data to the appropriate types.
+  buckets.forEach(function(d) {
+    d.X = +d.Year;
+    d.Y = +d.Month;
+    d.Power = +d.Power;
+	d.zip = +d['Zip Code']
+  });
+	
+  	var options = select
+	.selectAll('option')
+	.data(buckets).enter()
+	.append('option')
+	.text(function(d) {return d.zip})
+});
 
+function onchange(){
 
 d3.csv("heatmap.csv", function(error, buckets) {
   if (error) throw error;
@@ -66,14 +83,8 @@ d3.csv("heatmap.csv", function(error, buckets) {
     d.Power = +d.Power;
 	d.zip = +d['Zip Code']
   });
-
-
 	
-  	var options = select
-	.selectAll('option')
-	.data(buckets).enter()
-	.append('option')
-	.text(function(d) {return d.zip})
+
 	
 	
   // Compute the scale domains.
@@ -86,7 +97,7 @@ d3.csv("heatmap.csv", function(error, buckets) {
   x.domain([x.domain()[0], +x.domain()[1] + xStep]);
   y.domain([y.domain()[0], y.domain()[1] + yStep]);
 
-  var ZipSelect=90077;
+  var ZipSelect=d3.select('select').property('value');
   // Display the tiles for each non-zero bucket that matches the zip
   svg.selectAll(".tile")
       .data(buckets)
@@ -153,5 +164,5 @@ d3.csv("heatmap.csv", function(error, buckets) {
 		
 	
 });
-
+}
 </script>
