@@ -62,13 +62,26 @@ var path = sankey.link();
 // load the data with d3.csv instead of d3.json
 //for another much simpler example uncomment the below
 // d3.csv("d3noob_example.csv", function(error, data) {
-d3.csv("f1.csv", function(error, data) {
-	
+d3.csv("races.csv", function(error, data) {
+	d3.csv('teams.csv', function(error2,data2){
 	
  		//set up graph in same style as original example but empty
   		graph = {"nodes" : [], "links" : []};
   
                 data.forEach(function (d) {
+					d.source = d.race;
+					d.target = d.driver;
+					d.value = d.points;
+                    graph.nodes.push({ "name": d.source });
+                    graph.nodes.push({ "name": d.target });
+
+                    graph.links.push({ "source": d.source, "target": d.target, "value": +d.value });
+                });
+				
+				data2.forEach(function(d) {
+					d.source = d.driver;
+					d.target = d.team;
+					d.value = d.points;
                     graph.nodes.push({ "name": d.source });
                     graph.nodes.push({ "name": d.target });
 
@@ -92,7 +105,7 @@ d3.csv("f1.csv", function(error, data) {
                 graph.nodes.forEach(function (d, i) {
                     graph.nodes[i] = { "name": d };
                 });
- 
+ debugger
   sankey
       .nodes(graph.nodes)
       .links(graph.links)
@@ -162,7 +175,7 @@ d3.csv("f1.csv", function(error, data) {
     link.attr("d", path);
   }
 });
- 
+});
 </script>
  
 </body>
