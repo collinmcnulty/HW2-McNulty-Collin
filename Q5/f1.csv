@@ -1,0 +1,231 @@
+driver,team,points
+Valtteri Bottas,Williams,85
+Jenson Button,McLaren,21
+Felipe Nasr,Sauber,2
+Daniil Kvyat,Toro Rosso,25
+Lewis Hamilton,Mercedes,380
+Sebastian Vettel,Ferrari,212
+Sergio Prez,Force India,101
+Carlos Sainz,Toro Rosso,46
+Jolyon Palmer,Renault,1
+Pascal Wehrlein,Manor Marussia,1
+Felipe Massa,Williams,53
+Daniel Ricciardo,Red Bull,256
+Romain Grosjean,Haas F1 Team,29
+Nico Rosberg,Mercedes,385
+Kimi Rikknen,Ferrari,186
+Stoffel Vandoorne,McLaren,1
+Fernando Alonso,McLaren,54
+Nico Hlkenberg,Force India,72
+Max Verstappen,Red Bull,204
+Kevin Magnussen,Renault,7
+Australian Grand Prix,Nico Rosberg,25
+Australian Grand Prix,Lewis Hamilton,18
+Australian Grand Prix,Sebastian Vettel,15
+Australian Grand Prix,Daniel Ricciardo,12
+Australian Grand Prix,Felipe Massa,10
+Australian Grand Prix,Romain Grosjean,8
+Australian Grand Prix,Nico Hlkenberg,6
+Australian Grand Prix,Valtteri Bottas,4
+Australian Grand Prix,Carlos Sainz,2
+Australian Grand Prix,Max Verstappen,1
+Bahrain Grand Prix,Nico Rosberg,25
+Bahrain Grand Prix,Kimi Rikknen,18
+Bahrain Grand Prix,Lewis Hamilton,15
+Bahrain Grand Prix,Daniel Ricciardo,12
+Bahrain Grand Prix,Romain Grosjean,10
+Bahrain Grand Prix,Max Verstappen,8
+Bahrain Grand Prix,Daniil Kvyat,6
+Bahrain Grand Prix,Felipe Massa,4
+Bahrain Grand Prix,Valtteri Bottas,2
+Bahrain Grand Prix,Stoffel Vandoorne,1
+Chinese Grand Prix,Nico Rosberg,25
+Chinese Grand Prix,Sebastian Vettel,18
+Chinese Grand Prix,Daniil Kvyat,15
+Chinese Grand Prix,Daniel Ricciardo,12
+Chinese Grand Prix,Kimi Rikknen,10
+Chinese Grand Prix,Felipe Massa,8
+Chinese Grand Prix,Lewis Hamilton,6
+Chinese Grand Prix,Max Verstappen,4
+Chinese Grand Prix,Carlos Sainz,2
+Chinese Grand Prix,Valtteri Bottas,1
+Russian Grand Prix,Nico Rosberg,25
+Russian Grand Prix,Lewis Hamilton,18
+Russian Grand Prix,Kimi Rikknen,15
+Russian Grand Prix,Valtteri Bottas,12
+Russian Grand Prix,Felipe Massa,10
+Russian Grand Prix,Fernando Alonso,8
+Russian Grand Prix,Kevin Magnussen,6
+Russian Grand Prix,Romain Grosjean,4
+Russian Grand Prix,Sergio Prez,2
+Russian Grand Prix,Jenson Button,1
+Spanish Grand Prix,Max Verstappen,25
+Spanish Grand Prix,Kimi Rikknen,18
+Spanish Grand Prix,Sebastian Vettel,15
+Spanish Grand Prix,Daniel Ricciardo,12
+Spanish Grand Prix,Valtteri Bottas,10
+Spanish Grand Prix,Carlos Sainz,8
+Spanish Grand Prix,Sergio Prez,6
+Spanish Grand Prix,Felipe Massa,4
+Spanish Grand Prix,Jenson Button,2
+Spanish Grand Prix,Daniil Kvyat,1
+Monaco Grand Prix,Lewis Hamilton,25
+Monaco Grand Prix,Daniel Ricciardo,18
+Monaco Grand Prix,Sergio Prez,15
+Monaco Grand Prix,Sebastian Vettel,12
+Monaco Grand Prix,Fernando Alonso,10
+Monaco Grand Prix,Nico Hlkenberg,8
+Monaco Grand Prix,Nico Rosberg,6
+Monaco Grand Prix,Carlos Sainz,4
+Monaco Grand Prix,Jenson Button,2
+Monaco Grand Prix,Felipe Massa,1
+Canadian Grand Prix,Lewis Hamilton,25
+Canadian Grand Prix,Sebastian Vettel,18
+Canadian Grand Prix,Valtteri Bottas,15
+Canadian Grand Prix,Max Verstappen,12
+Canadian Grand Prix,Nico Rosberg,10
+Canadian Grand Prix,Kimi Rikknen,8
+Canadian Grand Prix,Daniel Ricciardo,6
+Canadian Grand Prix,Nico Hlkenberg,4
+Canadian Grand Prix,Carlos Sainz,2
+Canadian Grand Prix,Sergio Prez,1
+European Grand Prix,Nico Rosberg,25
+European Grand Prix,Sebastian Vettel,18
+European Grand Prix,Sergio Prez,15
+European Grand Prix,Kimi Rikknen,12
+European Grand Prix,Lewis Hamilton,10
+European Grand Prix,Valtteri Bottas,8
+European Grand Prix,Daniel Ricciardo,6
+European Grand Prix,Max Verstappen,4
+European Grand Prix,Nico Hlkenberg,2
+European Grand Prix,Felipe Massa,1
+Austrian Grand Prix,Lewis Hamilton,25
+Austrian Grand Prix,Max Verstappen,18
+Austrian Grand Prix,Kimi Rikknen,15
+Austrian Grand Prix,Nico Rosberg,12
+Austrian Grand Prix,Daniel Ricciardo,10
+Austrian Grand Prix,Jenson Button,8
+Austrian Grand Prix,Romain Grosjean,6
+Austrian Grand Prix,Carlos Sainz,4
+Austrian Grand Prix,Valtteri Bottas,2
+Austrian Grand Prix,Pascal Wehrlein,1
+British Grand Prix,Lewis Hamilton,25
+British Grand Prix,Max Verstappen,18
+British Grand Prix,Nico Rosberg,15
+British Grand Prix,Daniel Ricciardo,12
+British Grand Prix,Kimi Rikknen,10
+British Grand Prix,Sergio Prez,8
+British Grand Prix,Nico Hlkenberg,6
+British Grand Prix,Carlos Sainz,4
+British Grand Prix,Sebastian Vettel,2
+British Grand Prix,Daniil Kvyat,1
+Hungarian Grand Prix,Lewis Hamilton,25
+Hungarian Grand Prix,Nico Rosberg,18
+Hungarian Grand Prix,Daniel Ricciardo,15
+Hungarian Grand Prix,Sebastian Vettel,12
+Hungarian Grand Prix,Max Verstappen,10
+Hungarian Grand Prix,Kimi Rikknen,8
+Hungarian Grand Prix,Fernando Alonso,6
+Hungarian Grand Prix,Carlos Sainz,4
+Hungarian Grand Prix,Valtteri Bottas,2
+Hungarian Grand Prix,Nico Hlkenberg,1
+German Grand Prix,Lewis Hamilton,25
+German Grand Prix,Daniel Ricciardo,18
+German Grand Prix,Max Verstappen,15
+German Grand Prix,Nico Rosberg,12
+German Grand Prix,Sebastian Vettel,10
+German Grand Prix,Kimi Rikknen,8
+German Grand Prix,Nico Hlkenberg,6
+German Grand Prix,Jenson Button,4
+German Grand Prix,Valtteri Bottas,2
+German Grand Prix,Sergio Prez,1
+Belgian Grand Prix,Nico Rosberg,25
+Belgian Grand Prix,Daniel Ricciardo,18
+Belgian Grand Prix,Lewis Hamilton,15
+Belgian Grand Prix,Nico Hlkenberg,12
+Belgian Grand Prix,Sergio Prez,10
+Belgian Grand Prix,Sebastian Vettel,8
+Belgian Grand Prix,Fernando Alonso,6
+Belgian Grand Prix,Valtteri Bottas,4
+Belgian Grand Prix,Kimi Rikknen,2
+Belgian Grand Prix,Felipe Massa,1
+Italian Grand Prix,Nico Rosberg,25
+Italian Grand Prix,Lewis Hamilton,18
+Italian Grand Prix,Sebastian Vettel,15
+Italian Grand Prix,Kimi Rikknen,12
+Italian Grand Prix,Daniel Ricciardo,10
+Italian Grand Prix,Valtteri Bottas,8
+Italian Grand Prix,Max Verstappen,6
+Italian Grand Prix,Sergio Prez,4
+Italian Grand Prix,Felipe Massa,2
+Italian Grand Prix,Nico Hlkenberg,1
+Singapore Grand Prix,Nico Rosberg,25
+Singapore Grand Prix,Daniel Ricciardo,18
+Singapore Grand Prix,Lewis Hamilton,15
+Singapore Grand Prix,Kimi Rikknen,12
+Singapore Grand Prix,Sebastian Vettel,10
+Singapore Grand Prix,Max Verstappen,8
+Singapore Grand Prix,Fernando Alonso,6
+Singapore Grand Prix,Sergio Prez,4
+Singapore Grand Prix,Daniil Kvyat,2
+Singapore Grand Prix,Kevin Magnussen,1
+Malaysian Grand Prix,Daniel Ricciardo,25
+Malaysian Grand Prix,Max Verstappen,18
+Malaysian Grand Prix,Nico Rosberg,15
+Malaysian Grand Prix,Kimi Rikknen,12
+Malaysian Grand Prix,Valtteri Bottas,10
+Malaysian Grand Prix,Sergio Prez,8
+Malaysian Grand Prix,Fernando Alonso,6
+Malaysian Grand Prix,Nico Hlkenberg,4
+Malaysian Grand Prix,Jenson Button,2
+Malaysian Grand Prix,Jolyon Palmer,1
+Japanese Grand Prix,Nico Rosberg,25
+Japanese Grand Prix,Max Verstappen,18
+Japanese Grand Prix,Lewis Hamilton,15
+Japanese Grand Prix,Sebastian Vettel,12
+Japanese Grand Prix,Kimi Rikknen,10
+Japanese Grand Prix,Daniel Ricciardo,8
+Japanese Grand Prix,Sergio Prez,6
+Japanese Grand Prix,Nico Hlkenberg,4
+Japanese Grand Prix,Felipe Massa,2
+Japanese Grand Prix,Valtteri Bottas,1
+United States Grand Prix,Lewis Hamilton,25
+United States Grand Prix,Nico Rosberg,18
+United States Grand Prix,Daniel Ricciardo,15
+United States Grand Prix,Sebastian Vettel,12
+United States Grand Prix,Fernando Alonso,10
+United States Grand Prix,Carlos Sainz,8
+United States Grand Prix,Felipe Massa,6
+United States Grand Prix,Sergio Prez,4
+United States Grand Prix,Jenson Button,2
+United States Grand Prix,Romain Grosjean,1
+Mexican Grand Prix,Lewis Hamilton,25
+Mexican Grand Prix,Nico Rosberg,18
+Mexican Grand Prix,Daniel Ricciardo,15
+Mexican Grand Prix,Max Verstappen,12
+Mexican Grand Prix,Sebastian Vettel,10
+Mexican Grand Prix,Kimi Rikknen,8
+Mexican Grand Prix,Nico Hlkenberg,6
+Mexican Grand Prix,Valtteri Bottas,4
+Mexican Grand Prix,Felipe Massa,2
+Mexican Grand Prix,Sergio Prez,1
+Brazilian Grand Prix,Lewis Hamilton,25
+Brazilian Grand Prix,Nico Rosberg,18
+Brazilian Grand Prix,Max Verstappen,15
+Brazilian Grand Prix,Sergio Prez,12
+Brazilian Grand Prix,Sebastian Vettel,10
+Brazilian Grand Prix,Carlos Sainz,8
+Brazilian Grand Prix,Nico Hlkenberg,6
+Brazilian Grand Prix,Daniel Ricciardo,4
+Brazilian Grand Prix,Felipe Nasr,2
+Brazilian Grand Prix,Fernando Alonso,1
+Abu Dhabi Grand Prix,Lewis Hamilton,25
+Abu Dhabi Grand Prix,Nico Rosberg,18
+Abu Dhabi Grand Prix,Sebastian Vettel,15
+Abu Dhabi Grand Prix,Max Verstappen,12
+Abu Dhabi Grand Prix,Daniel Ricciardo,10
+Abu Dhabi Grand Prix,Kimi Rikknen,8
+Abu Dhabi Grand Prix,Nico Hlkenberg,6
+Abu Dhabi Grand Prix,Sergio Prez,4
+Abu Dhabi Grand Prix,Felipe Massa,2
+Abu Dhabi Grand Prix,Fernando Alonso,1
