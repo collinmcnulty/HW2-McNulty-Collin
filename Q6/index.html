@@ -160,13 +160,18 @@ function barbaby(f){
             .call(d3.svg.axis().scale(y).orient("left"));
 
         // Create function for x-axis map.
-        var x = d3.scale.linear().range([hGDim.h, 0])
+        var x = d3.scale.linear().range([hGDim.w, 0])
                 .domain([0, d3.max(f, function(d) { return d[1]; })]);
 
         // Create bars for histogram to contain rectangles and freq labels.
         var bars = BBsvg.selectAll(".bar").data(f).enter()
                 .append("g").attr("class", "bar");
         
+        // Add y-axis to the histogram svg.
+        BBsvg.append("g").attr("class", "y axis")
+            .attr("transform", "translate(30," + 0 + ")")
+            .call(d3.svg.axis().scale(y).orient("left"));
+		
         //create the rectangles.
         bars.append("rect")
             .attr("x", 50)
@@ -176,6 +181,11 @@ function barbaby(f){
             .attr('fill',barColor)
             //.on("mouseover",mouseover)// mouseover is defined below.
             //.on("mouseout",mouseout);// mouseout is defined below.
+        bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+            .attr("y", function(d) { return y(d[0])+y.rangeBand()/2; })
+            .attr("x", function(d) { console.log(x(d[1])) 
+				return hGDim.h - x(d[1])-50; })
+            .attr("text-anchor", "middle");
  
 }
 
