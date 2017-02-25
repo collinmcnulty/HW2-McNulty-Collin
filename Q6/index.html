@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Interactive Viz</title>
+<style>
+body{
+    width:1060px;
+    margin:50px auto;
+}
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+rect:hover {  fill:red; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+
+</style>
+<body>
+<div id='dashboard'>
+</div>
+ 
+<script src="http://d3js.org/d3.v3.js"></script>
+
+<script>
+
+
+
+var data = [{product:'Product A',freq:{Q1:576, Q2:1176, Q3:1009, Q4:494}},
+{product:'Product B',freq:{Q1:959, Q2:1653, Q3:1999, Q4:697}},
+{product:'Product C',freq:{Q1:3210, Q2:4220, Q3:1648, Q4:919}},
+{product:'Product D',freq:{Q1:589, Q2:2043, Q3:1153, Q4:911}},
+{product:'Product E',freq:{Q1:2599, Q2:1333, Q3:818, Q4:1713}},
+{product:'Product F',freq:{Q1:431, Q2:324, Q3:715, Q4:421}},
+{product:'Product G',freq:{Q1:1457, Q2:2557, Q3:2245, Q4:762}},
+{product:'Product H',freq:{Q1:2573, Q2:3357, Q3:1598, Q4:1287}}];
+
+var first = 0;
+var barColor = 'steelblue';
+id='#dashboard'
+data.forEach(function (d) {
+	d.total = d.freq.Q1 + d.freq.Q2 + d.freq.Q3 +d.freq.Q4
+});
+var width = 420,
+    barHeight = 20;
+
+function barchart(f){
+	var hG={},    hGDim = {t: 60, r: 0, b: 30, l: 30};
+        hGDim.w = 450 - hGDim.l - hGDim.r, 
+        hGDim.h = 400 - hGDim.t - hGDim.b;
+		
+		//create svg for main bars
+        var hGsvg = d3.select(id).append("svg")
+            .attr("width", hGDim.w + hGDim.l + hGDim.r)
+            .attr("height", hGDim.h + hGDim.t + hGDim.b).append("g")
+            .attr("transform", "translate(" + hGDim.l + "," + hGDim.t + ")");
+			
+		// create function for y-axis mapping.
+        var y = d3.scale.ordinal().rangeRoundBands([0, hGDim.h+1], 0.1)
+                .domain(f.map(function(d) { return d[0]; }));
+
+        // Add y-axis to the histogram svg.
+        hGsvg.append("g").attr("class", "y axis")
+            .attr("transform", "translate(30," + 0 + ")")
+            .call(d3.svg.axis().scale(y).orient("left"));
+
+        // Create function for x-axis map.
+        var x = d3.scale.linear().range([0,hGDim.w-100])
+                .domain([0, d3.max(f, function(d) { return d[1]; })]);
+
+        // Create bars for histogram to contain rectangles and freq labels.
+        var bars = hGsvg.selectAll(".bar").data(f).enter()
+                .append("g").attr("class", "bar");
+        
+        //create the rectangles.
+        bars.append("rect")
+            .attr("x", 50)
+            .attr("y", function(d) { return y(d[0]); })
+            .attr("height", y.rangeBand())
+            .attr("width", function(d) { return x(d[1]); })
+            .attr('fill',barColor)
+            .on("mouseover",mouseover)// mouseover is defined below.
+            .on("mouseout",mouseout);// mouseout is defined below.
+        
+		
+		//Create the frequency labels above the rectangles.
+        bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+            .attr("y", function(d) { return y(d[0])+y.rangeBand()/2; })
+            .attr("x", function(d) { console.log(x(d[1])) 
+				return x(d[1]); })
+            .attr("text-anchor", "middle");
+        
+		
+		function mouseover(d){  // utility function to be called on mouseover.
+            // filter for selected state.
+			
+            var st = data.filter(function(s){ return s.product == d[0];})[0];
+			
+            var nD = d3.keys(st.freq).map(function(s){ return {type:s, freq:st.freq[s]};});
+            var sF = data.map(function(d){return [d.product,d.total];});
+			var sF = nD.map(function(d){return [ d.type, d.freq]})
+			//debugger
+			var bb = barbaby(sF);
+			if (first == 0){
+			//debugger
+			
+			first=1}
+				else {first = 1}
+            // call update functions of pie-chart and legend.    
+            
+			//pC.update(nD);
+            //leg.update(nD);
+        }
+		function mouseout(d){    // utility function to be called on mouseout.
+            // reset the pie-chart and legend.    
+		d3.select('#BBvg').remove()
+		};
+}
+
+function barbaby(f){
+	var hG={},    hGDim = {t: 60, r: 0, b: 30, l: 0};
+        hGDim.w = 300 - hGDim.l - hGDim.r, 
+        hGDim.h = 400 - hGDim.t - hGDim.b;
+		
+		//create svg for main bars
+        var BBsvg = d3.select(id).append("svg")
+			.attr('id', 'BBvg')
+            .attr("width", hGDim.w + hGDim.l + hGDim.r)
+            .attr("height", hGDim.h + hGDim.t + hGDim.b).append("g")
+            .attr("transform", "translate(" + hGDim.l + "," + 0 + ")");
+			
+		// create function for y-axis mapping.
+        var y = d3.scale.ordinal().rangeRoundBands([0, hGDim.w], 0.1)
+                .domain(f.map(function(d) { return d[0]; }));
+
+        // Add y-axis to the histogram svg.
+        BBsvg.append("g").attr("class", "x axis")
+            .attr("transform", "translate(0," + hGDim.h + ")")
+            .call(d3.svg.axis().scale(y).orient("left"));
+
+        // Create function for x-axis map.
+        var x = d3.scale.linear().range([hGDim.w, 0])
+                .domain([0, d3.max(f, function(d) { return d[1]; })]);
+
+        // Create bars for histogram to contain rectangles and freq labels.
+        var bars = BBsvg.selectAll(".bar").data(f).enter()
+                .append("g").attr("class", "bar");
+        
+        // Add y-axis to the histogram svg.
+        BBsvg.append("g").attr("class", "y axis")
+            .attr("transform", "translate(30," + 0 + ")")
+            .call(d3.svg.axis().scale(y).orient("left"));
+		
+        //create the rectangles.
+        bars.append("rect")
+            .attr("x", 50)
+            .attr("y", function(d) { return y(d[0]); })
+            .attr("height", y.rangeBand())
+            .attr("width", function(d) { return hGDim.h - x(d[1]); })
+            .attr('fill',barColor)
+            //.on("mouseover",mouseover)// mouseover is defined below.
+            //.on("mouseout",mouseout);// mouseout is defined below.
+        bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+            .attr("y", function(d) { return y(d[0])+y.rangeBand()/2; })
+            .attr("x", function(d) { console.log(x(d[1])) 
+				return hGDim.h - x(d[1])-50; })
+            .attr("text-anchor", "middle");
+ 
+}
+
+
+	
+var sF = data.map(function(d){return [d.product,d.total];});
+var hG = barchart(sF); // create the histogram.
+//var bb = barbaby(sF);
+</script>
+ 
+</body>
+</html>
