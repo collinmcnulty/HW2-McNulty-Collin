@@ -69,28 +69,19 @@ g.call(d3.axisBottom(x)
     .remove();
 
 d3.queue()
-d3.json("us.json", function(us){
-    d3.json("median_earnings.json", function(d) {
-	for (var i = 0; i < d.length; i++) {
-		unemployment.set(d[i].id, +d[i].median_earnings); 
-	}	
-    ready(us)
-	})
-});
+    .defer(d3.json, "https://d3js.org/us-10m.v1.json")
+    .defer(d3.tsv, "unemployment.tsv", function(d) { unemployment.set(d.id, +d.rate); })
+    .await(ready);
 
-function ready(us) {
-  //if (error) throw error;
+function ready(error, us) {
+  if (error) throw error;
+
   svg.append("g")
       .attr("class", "counties")
     .selectAll("path")
-    .data(topojson.feature(us, us.objects.states).features)
+    .data(topojson.feature(us, us.objects.counties).features)
     .enter().append("path")
-	.attr("x",50)
-      .attr("fill", function(d) { 
-	  console.log(unemployment.get(d.id));
-	  console.log(color(unemployment.get(d.id)));
-	  //debugger
-	  return color(unemployment.get(d.id)); })
+      .attr("fill", function(d) { return color(d.rate = unemployment.get(d.id)); })
       .attr("d", path)
     .append("title")
       .text(function(d) { return d.rate + "%"; });
