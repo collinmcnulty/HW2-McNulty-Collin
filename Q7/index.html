@@ -36,8 +36,8 @@ var path = d3.geo.path()               // path generator that will convert GeoJS
 //var path = d3.geoPath();
 
 var x = d3.scale.linear()
-    .domain([1, 10])
-    .rangeRound([600, 860]);
+    .domain([10000, 40000])
+    .range([600, 800]);
 
 var color = d3.scale.linear()
     .domain([2, 40000])
@@ -47,18 +47,23 @@ var g = svg.append("g")
     .attr("class", "key")
     .attr("transform", "translate(0,40)");
 
-// g.selectAll("rect")
-  // .data(color.range().map(function(d) {
-      //d = color.invertExtent(d);
-      // if (d[0] == null) d[0] = x.domain()[0];
-      // if (d[1] == null) d[1] = x.domain()[1];
-      // return d;
-    // }))
-  // .enter().append("rect")
-    // .attr("height", 8)
-    // .attr("x", function(d) { return x(d[0]); })
-    // .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-    // .attr("fill", function(d) { return color(d[0]); });
+g.selectAll("rect")
+  .data([10000,20000,30000,40000])
+  .enter().append("rect")
+    .attr("height", 20)
+    .attr("x", function(d) { return x(d); })
+    .attr("width", function(d) { return x(20000)-x(10000); })
+    .attr("fill", function(d) { return color(d); });
+
+g.selectAll('text')
+	.data([10000,20000,30000,40000])
+	.enter().append('text')
+		.attr("height", 20)
+		.attr("x", function(d) { return x(d); })
+		.attr('y', 40)
+		.attr("width", function(d) { return x(20000)-x(10000); })
+		.attr("text-anchor", "start")
+		.text(function(d){return '$' + d})
 
 g.append("text")
     .attr("class", "caption")
@@ -67,7 +72,7 @@ g.append("text")
     .attr("fill", "#000")
     .attr("text-anchor", "start")
     .attr("font-weight", "bold")
-    .text("Unemployment rate");
+    .text("Median Earnings by State");
 
 // g.call(d3.axisBottom(x)
     // .tickSize(13)
@@ -100,7 +105,7 @@ function ready(us) {
       .attr("d", path)
 	.append("title")
       .text(function(d) {
-		  console.log(d) 
+		  //console.log(d) 
 	  return unemployment.get(d.id); });
 
   // svg.append("path")
