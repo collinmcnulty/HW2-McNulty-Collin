@@ -40,7 +40,7 @@ var x = d3.scale.linear()
     .rangeRound([600, 860]);
 
 var color = d3.scale.linear()
-    .domain(d3.range(2, 10))
+    .domain([2, 40000])
     .range(['white','red']);
 
 var g = svg.append("g")
@@ -94,10 +94,14 @@ function ready(us) {
     .data(topojson.feature(us, us.objects.states).features)
     .enter().append("path")
       .attr("fill", function(d) { 
-	  debugger
+	  //console.log(unemployment.get(d.id))
+	  //console.log(color(unemployment.get(d.id)))
 	  return color(unemployment.get(d.id)); })
       .attr("d", path)
-
+	.append("title")
+      .text(function(d) {
+		  console.log(d) 
+	  return unemployment.get(d.id); });
 
   // svg.append("path")
       // .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
